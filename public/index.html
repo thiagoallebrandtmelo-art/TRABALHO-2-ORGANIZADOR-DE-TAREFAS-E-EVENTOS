@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Organizador de Tarefas e Eventos</h1>
+
+        <form id="form-tarefa">
+            <div class="campo">
+                <label for="titulo">Título *</label>
+                <input type="text" id="titulo" required>
+            </div>
+
+            <div class="campo">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" rows="3"></textarea>
+            </div>
+
+            <div class="linha">
+                <div class="campo">
+                    <label for="data">Data *</label>
+                    <input type="date" id="data" required>
+                </div>
+                <div class="campo">
+                    <label for="horario">Horário</label>
+                    <input type="time" id="horario">
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="campo">
+                    <label for="categoria">Categoria *</label>
+                    <select id="categoria" required>
+                        <option value="Estudo">Estudo</option>
+                        <option value="Trabalho">Trabalho</option>
+                        <option value="Pessoal">Pessoal</option>
+                        <option value="Evento">Evento</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="prioridade">Prioridade *</label>
+                    <select id="prioridade" required>
+                        <option value="Baixa">Baixa</option>
+                        <option value="Média">Média</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" id="btn-adicionar">Adicionar Tarefa</button>
+        </form>
+
+        <section class="proximos-container">
+            <h2>Próximos Compromissos</h2>
+            <div id="lista-proximos" class="proximos-cards"></div>
+        </section>
+
+        <section class="filtros">
+            <h2>Filtros</h2>
+            <div class="linha-filtros">
+                <div class="campo-filtro">
+                    <label for="filtro-status">Status:</label>
+                    <select id="filtro-status">
+                        <option value="Todas">Todas</option>
+                        <option value="Pendentes">Pendentes</option>
+                        <option value="Concluídas">Concluídas</option>
+                    </select>
+                </div>
+
+                <div class="campo-filtro">
+                    <label for="filtro-categoria">Categoria:</label>
+                    <select id="filtro-categoria">
+                        <option value="Todas">Todas</option>
+                        <option value="Estudo">Estudo</option>
+                        <option value="Trabalho">Trabalho</option>
+                        <option value="Pessoal">Pessoal</option>
+                        <option value="Evento">Evento</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div id="lista-tarefas" class="tarefas-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
