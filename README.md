@@ -1,0 +1,1 @@
+Este projeto é uma aplicação web CRUD completa que permite cadastrar, visualizar, filtrar, atualizar e excluir tarefas, integrando uma interface em JavaScript a um servidor Node.js/Express que salva os dados em um arquivo JSON.
